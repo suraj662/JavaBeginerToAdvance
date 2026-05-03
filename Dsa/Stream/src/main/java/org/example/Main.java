@@ -6,6 +6,9 @@ import java.util.stream.IntStream;
 
 
 public class Main {
+
+
+
     public static void main() {
 
 //        int n =17;
@@ -41,9 +44,19 @@ public class Main {
 //                .forEach(name -> System.out.println(name));
 
         //Find employee details of highest salary
+//        employees.stream()
+//                .max((e1 , e2) -> Double.compare(e1.getSalary() , e2.getSalary()))
+//                .ifPresent(e -> System.out.println(e));
+
+        //Group employees by IT department
         employees.stream()
-                .max((e1 , e2) -> Double.compare(e1.getSalary() , e2.getSalary()))
-                .ifPresent(e -> System.out.println(e));
+                .collect(Collectors.groupingBy(e -> e.getDepartment())).
+                forEach((k,v) -> System.out.println(k + " -> " + v));
+
+
+
+//               employees.stream()
+//                .map(Employee::getDepartment().forEach(System.out::println);
 
     }
 
