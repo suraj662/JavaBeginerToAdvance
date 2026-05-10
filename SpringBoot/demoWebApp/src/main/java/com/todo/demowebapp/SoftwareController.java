@@ -36,11 +36,13 @@ public class SoftwareController {
         return softwareEngineerService.getSoftwareEngineerList();
     }
 
+    //Read
     @GetMapping("{id}")
     public SoftwareEngineer getEngineerbyId(@PathVariable Integer id) {
         return softwareEngineerService.getSoftwareEngineerbyId(id);
     }
 
+    //Create
     //add new endpoint for softwareengineer using
     //client to server
     @PostMapping
