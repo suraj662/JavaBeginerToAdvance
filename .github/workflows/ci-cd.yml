@@ -42,7 +42,7 @@ jobs:
         run: echo "${{ secrets.Trex890@# }}" | docker login -u "${{ secrets.suraj00001 }}" --password-stdin
 
       - name: Build Docker image
-        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/cicd-demo-app:latest .
+        run: docker build -t ${{ secrets.suraj00001 }}/cicd-demo-app:latest .
 
       - name: Push Docker image
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/cicd-demo-app:latest
+        run: docker push ${{ secrets.suraj00001 }}/cicd-demo-app:latest
